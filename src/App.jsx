@@ -60,8 +60,7 @@ const App = () => {
             backgroundColor: "rgba(255, 99, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
-          }
-         
+          },
         ],
       },
       graphData2: {
@@ -73,8 +72,7 @@ const App = () => {
             backgroundColor: "rgba(54, 162, 235, 0.2)",
             borderColor: "rgba(54, 162, 235, 1)",
             borderWidth: 1,
-          }
-
+          },
         ],
       },
       graphData3: {
@@ -83,8 +81,8 @@ const App = () => {
           {
             label: "Availability (%)",
             data: availabilities,
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
+            backgroundColor: "rgba(96, 188, 188, 0.2)",
+            borderColor: "rgb(57, 193, 193)",
             borderWidth: 1,
           },
         ],
@@ -95,12 +93,10 @@ const App = () => {
   return (
     <div className="app">
       <Navbar />
-      <div className="graph">
-        {/* <Graph/> */}
-      </div>
+      <div className="graph">{/* <Graph/> */}</div>
       <div className="content">
-      <Guideliness />
-      <Theory/>
+        <Guideliness />
+        <Theory />
         <h1 className="hh">Reliability of GMRT</h1>
         <Routes>
           <Route
@@ -109,17 +105,15 @@ const App = () => {
               <>
                 <Dropdowns calculateReliability={calculateReliability} />
                 <Reliability metrics={reliabilityMetrics} />
-                
               </>
             }
           />
           <Route path="/upload-excel" element={<UploadExcel />} />
         </Routes>
-        
       </div>
-      
+
       {/* create a new div tag for only graph */}
-      
+
       <Footer />
     </div>
   );
