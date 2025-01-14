@@ -5,7 +5,7 @@ export default defineConfig({
     proxy: {
       '/upload': {
         target: 'http://localhost:5000', // Backend server
-        base: '/Gmrt_Relibility/',
+        base: '/Reliability/',
         changeOrigin: true,
       },
     },
